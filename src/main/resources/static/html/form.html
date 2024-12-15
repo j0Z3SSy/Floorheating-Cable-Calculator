@@ -1,0 +1,90 @@
+<!-- form.html -->
+<form id="KaapeliForm">
+  <div id="joustava_tumma_laatikko">
+    <div class="form-section">
+      <h3>Huone</h3>
+      <p>
+        <i> Syötä huoneen pituus ja leveys. </i>
+      </p>
+      <label for="pituus"><b>Pituus (m)</b></label>
+      <input type="number" id="pituus" name="pituus" min="0" max="100" step="0.01" required />
+      <label for="leveys"><b>Leveys (m)</b></label>
+      <input type="number" id="leveys" name="leveys" min="0" max="100" step="0.01" required />
+      <div id="pinta_ala"></div>
+    </div>
+
+    <div class="form-section">
+      <h3>Kylmät ja lämpimät alueet</h3>
+      <p>
+        <i> Valitse ja/tai syötä kaikki alueelle tulevat kylmät alueet. </i>
+      </p>
+      <input type="checkbox" id="seinat" name="on_seinat" value="1" />
+      <label for="seinat"><b>Seinät</b></label
+      ><br />
+      <input type="checkbox" id="wc" name="on_wc" value="1" />
+      <label for="wc"><b>WC-pönttö</b></label
+      ><br />
+      <input type="checkbox" id="lattiakaivo" name="on_lattiakaivo" value="1" />
+      <label for="lattiakaivo"><b>Lattiakaivo</b></label
+      ><br />
+      <label for="kylma_pituus"><b>Pituus (m)</b></label>
+      <input type="number" id="kylma_pituus" name="kylma_pituus" min="0" max="100" step="0.01" />
+      <label for="kylma_leveys"><b>Leveys (m)</b></label>
+      <input type="number" id="kylma_leveys" name="kylma_leveys" min="0" max="100" step="0.01" />
+      <div id="kylmä_pinta_ala"></div>
+      <div id="lämmitetty_pinta_ala"></div>
+    </div>
+  </div>
+  <div id="joustava_tumma_laatikko">
+    <div class="form-section">
+      <h3>Asennustapa</h3>
+      <p>
+        <i> Valitse asennustapa sen mukaan miten kaapeli asennetaan lattiaan. </i>
+      </p>
+      <input type="radio" id="tasoite" name="asennus_tapa" value="1" required />
+      <label for="tasoite"><b>Tasoite (PST 10 tai PST-C)</b></label
+      ><br />
+      <input type="radio" id="betonivalu" name="asennus_tapa" value="2" required />
+      <label for="betonivalu"><b>Betonivalu (PST 18)</b></label
+      ><br />
+      <div id="asennusväli"></div>
+    </div>
+    <div class="form-section">
+      <h3>Tehoalue</h3>
+      <p>
+        <i> Valitse tai syötä haluttu tehoalue. </i>
+      </p>
+      <input type="radio" id="matalaenergiatalot" name="teho_alue" value="1" required />
+      <label for="matalaenergiatalot"><b>Matalaenergiatalot (n. 40-80 W/m²)</b></label
+      ><br />
+      <input type="radio" id="mukavuuslammitus" name="teho_alue" value="2" required />
+      <label for="mukavuuslammitus"><b>Mukavuuslämmitys (n. 70-120 W/m²)</b></label
+      ><br />
+      <input type="radio" id="kostea_tila" name="teho_alue" value="3" required />
+      <label for="kostea_tila"><b>Kostea tila (n. 80-130 W/m²)</b></label
+      ><br />
+      <input type="radio" id="osittain_varaava" name="teho_alue" value="4" required />
+      <label for="osittain_varaava"><b>Osittain varaava (n. 100-160 W/m²)</b></label
+      ><br />
+      <input type="radio" id="custom" name="teho_alue" value="5" required />
+      <label for="custom"><b>Custom (n. 40-200 W/m²)</b></label
+      ><br />
+      <label for="teho_per_neliö"><b>Custom (W/m²)</b></label>
+      <input type="number" id="teho_per_neliö" name="teho_per_neliö" min="40" max="200" step="1" />
+      <div id="teho_per_neliö"></div>
+    </div>
+    <div id="form-section">
+      <button type="submit"><b>Lähetä</b></button>
+    </div>
+  </div>
+  <div id="joustava_tumma_laatikko">
+    <div class="form-section">
+      <h3>Tulos</h3>
+      <p>
+        <i> Syöttämäsi lomakkeen perusteella valittiin kaapeli ja sen tiedot esitetään tässä. </i>
+      </p>
+      <div id="kaapeli_tiedot"></div>
+      <div id="virhe"></div>
+    </div>
+  </div>
+</form>

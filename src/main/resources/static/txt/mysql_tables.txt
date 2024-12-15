@@ -1,0 +1,10 @@
+CREATE TABLE cables (
+    id INT PRIMARY KEY NOT NULL,
+    tyyppi VARCHAR(20) NOT NULL,
+    sahkonumero INT,
+    pituus DOUBLE NOT NULL,
+    teho DOUBLE NOT NULL,
+    vastus_per_metri DOUBLE NOT NULL,
+    vastus_toleranssi INT NOT NULL,
+    halkaisija INT NOT NULL
+);

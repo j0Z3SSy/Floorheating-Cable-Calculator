@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lattialämmitys-Palvelu</title>
+    <!-- Linkitetään CSS-tiedostot. -->
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <!-- Linkitetään jQuery-kirjasto -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Lattialämmitys-Palvelu</h1>
+      <p><i>"Kaapelin valitseminen ei ole koskaan ollut näin helppoa..."</i></p>
+    </header>
+    <main>
+      <section id="form"></section>
+      <section>
+        <div id="joustava_tumma_laatikko">
+          <h2>Tärkeää!</h2>
+          <p>
+            <i>
+              Kaapelin valinnassa käytetään vain Pistesarjojen-kaapeleita, valintakriteerit on muotoiltu maalaisjärjellä
+              ja valmistajan ohjeiden mukaan. <br />
+              Esim. Pistesarjojen tehoalueet ovat erittäin pienet verrattuna Deviin joten niitä on huomattavasti
+              joustettu suuntaan ja toiseen. <br />
+              Asentajan on otettava huomioon standardit ja kyettävä tarkistamaan laskelmien todenpitävyys ennen
+              asennusta.
+              <br />
+            </i>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <h4>Joni Mitronen</h4>
+      <h5>©2024 Joni Mitronen. All rights reserved.</h5>
+    </footer>
+
+    <!-- JavaScript-tiedostojen importit -->
+    <script src="javascript/form.js"></script>
+
+    <!-- AJAX-lataus eri osioille -->
+    <script>
+      $(document).ready(function () {
+        $("#form").load("html/form.html");
+      });
+    </script>
+  </body>
+</html>

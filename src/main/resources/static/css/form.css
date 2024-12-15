@@ -1,0 +1,48 @@
+/* form.css */
+form {
+  margin: 0.2em;
+  padding: 0.2em;
+  display: flex;
+}
+
+.form-section {
+  margin: 1em;
+  padding: 1em;
+  background-color: #00000070;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="checkbox"],
+input[type="radio"],
+button {
+  padding: 0.5em;
+  border: 0.1em solid #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  width: 6em;
+}
+
+button {
+  background-color: #ff4949;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 12em;
+  height: 3em;
+}
+
+button:hover {
+  background-color: #b63434;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #ff3434;
+  background-color: #ffffff;
+}
+
+input[type="radio"]:checked {
+  accent-color: #ff3434;
+  background-color: #ffccbc;
+}
